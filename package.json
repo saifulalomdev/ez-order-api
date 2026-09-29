@@ -2,14 +2,27 @@
   "name": "ez-order-api",
   "type": "module",
   "scripts": {
-    "dev": "wrangler dev",
+    "dev": "wrangler dev --ip 0.0.0.0",
     "deploy": "wrangler deploy --minify",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "wrangler d1 migrations apply ez-order",
+    "cf-types": "wrangler types --env-interface CloudflareBindings",
+    "db:generate:auth": "pnpm dlx auth@latest generate --output=./src/modules/auth/server/auth-tables.ts -y"
   },
   "dependencies": {
-    "hono": "^4.13.8"
+    "@better-upload/server": "^3.0.19",
+    "@hono/zod-openapi": "^1.6.3",
+    "@scalar/hono-api-reference": "^0.12.6",
+    "better-auth": "^1.7.6",
+    "drizzle-orm": "^0.45.3",
+    "drizzle-zod": "^0.8.3",
+    "hono": "^4.13.8",
+    "http-errors": "^2.0.1",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
+    "@types/http-errors": "^2.0.5",
+    "drizzle-kit": "^0.31.11",
     "wrangler": "^4.110.0"
   }
 }

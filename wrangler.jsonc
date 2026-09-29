@@ -2,32 +2,23 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "ez-order-api",
   "main": "src/index.ts",
-  "compatibility_date": "2026-09-23"
-  // "compatibility_flags": [
-  //   "nodejs_compat"
-  // ],
-  // "vars": {
-  //   "MY_VAR": "my-variable"
-  // },
-  // "kv_namespaces": [
-  //   {
-  //     "binding": "MY_KV_NAMESPACE",
-  //     "id": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-  //   }
-  // ],
-  // "r2_buckets": [
-  //   {
-  //     "binding": "MY_BUCKET",
-  //     "bucket_name": "my-bucket"
-  //   }
-  // ],
-  // "d1_databases": [
-  //   {
-  //     "binding": "MY_DB",
-  //     "database_name": "my-database",
-  //     "database_id": ""
-  //   }
-  // ],
+  "compatibility_date": "2026-09-23",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "EZ_ORDER_KV_CACHE",
+      "id": "58b83993e3514b549c03d77cde2512bd"
+    }
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ez-order",
+      "database_id": "e75c3a4f-28c7-46dc-8005-55c88ae7977e"
+    }
+  ],
   // "ai": {
   //   "binding": "AI"
   // },
@@ -35,4 +26,13 @@
   //   "enabled": true,
   //   "head_sampling_rate": 1
   // }
+  // "vars": {
+  //   "MY_VAR": "my-variable"
+  // },
+  // "r2_buckets": [
+  //   {
+  //     "binding": "MY_BUCKET",
+  //     "bucket_name": "my-bucket"
+  //   }
+  // ],
 }
