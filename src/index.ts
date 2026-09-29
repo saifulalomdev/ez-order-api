@@ -1,7 +1,5 @@
 // src/server/api.ts
 import { createApp } from './lib/create-app';
-import { categoryApp } from '@/modules/category/server/category-app';
-import { uploadApp } from '@/modules/upload/server/upload-app';
 import { Scalar } from '@scalar/hono-api-reference';
 import { auth } from '@/lib/auth';
 import { cors } from 'hono/cors'; 
@@ -18,9 +16,6 @@ app.use('*', cors({
 }));
 
 app.on(["POST", "GET", "OPTIONS"], "/auth/*", (c) => auth.handler(c.req.raw));
-
-app.route("/uploads", uploadApp);
-app.route("/categories", categoryApp);
 
 app.doc('/reference/json', {
     openapi: '3.0.0',

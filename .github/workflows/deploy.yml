@@ -29,8 +29,8 @@ jobs:
       - name: Execute Test Suites (Vitest)
         run: pnpm run test run
 
-      - name: Compile and Build Assets
-        run: pnpm run build
+      - name: Check types
+        run: pnpm run typecheck
 
       - name: Apply Cloudflare D1 Migrations
         if: github.ref == 'refs/heads/main'
