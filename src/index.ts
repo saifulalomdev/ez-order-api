@@ -21,7 +21,7 @@ app.doc('/reference/json', {
     openapi: '3.0.0',
     info: {
         version: '1.0.0',
-        title: 'Trackflow API',
+        title: 'EZ Order API',
     },
 });
 
@@ -32,7 +32,7 @@ app.onError((err, c) => {
 
 app.get('/reference', Scalar({
     url: '/api/reference/json',
-    pageTitle: 'Trackflow API',
+    pageTitle: 'EZ Order API',
     theme: 'kepler'
 }));
 
