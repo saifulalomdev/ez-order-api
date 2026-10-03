@@ -9,7 +9,7 @@
       "ESNext",
       "DOM"
     ],
-     "paths": {
+    "paths": {
       "@/*": [
         "./src/*"
       ]

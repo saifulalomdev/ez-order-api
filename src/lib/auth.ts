@@ -4,7 +4,7 @@ import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { ALLOWEDORIGINS } from "@/config/allowed-origins";
 import { betterAuth } from "better-auth";
 import { env } from "cloudflare:workers";
-import { db } from "@/db/client";
+import { db } from "@/db/db-client";
 
 export const auth = betterAuth({
     baseURL: env.BETTER_AUTH_URL,

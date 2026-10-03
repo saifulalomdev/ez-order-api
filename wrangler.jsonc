@@ -16,7 +16,8 @@
     {
       "binding": "DB",
       "database_name": "ez-order",
-      "database_id": "e75c3a4f-28c7-46dc-8005-55c88ae7977e"
+      "database_id": "e75c3a4f-28c7-46dc-8005-55c88ae7977e",
+      "remote": true
     }
   ],
   // "ai": {
